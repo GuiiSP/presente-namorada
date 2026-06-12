@@ -1,71 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para o Amor da Minha Vida ❤️</title>
+<title>Nossa História ❤️</title>
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
-    text-align:center;
-    color:white;
-    margin:0;
-}
+<link rel="stylesheet" href="style.css">
 
-.container{
-    padding:50px 20px;
-}
-
-img{
-    width:250px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
-}
-
-h1{
-    font-size:3rem;
-}
-
-.card{
-    background:rgba(255,255,255,0.15);
-    margin:20px auto;
-    max-width:700px;
-    padding:20px;
-    border-radius:20px;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
-    <h1>❤️ Para Minha Princesa ❤️</h1>
+<div class="particles"></div>
 
-    <img src="foto.jpg.jpg" alt="Nós dois">
+<section class="hero">
 
-    <div class="card">
-        <h2>Minha Carta Para Você</h2>
+    <img src="foto.jpg" alt="Nós dois">
+
+    <div class="overlay">
+        <h1>10 Meses ❤️</h1>
         <p>
-            Desde que você entrou na minha vida,
-            tudo ficou mais bonito. Obrigado por cada
-            sorriso, abraço e momento ao seu lado.
-            Eu te amo infinitamente. ❤️
+            Uma história construída com carinho,
+            cumplicidade e amor.
         </p>
     </div>
 
-    <div class="card">
-        <h2>Nossa História</h2>
-        <p>
-            Tudo começou quando...
-        </p>
-    </div>
+</section>
 
-    <div class="card">
-        <h2>💖 Te Amo 💖</h2>
-    </div>
-</div>
+<section class="content">
+
+    <h2>Para Você</h2>
+
+    <p>
+        Há 10 meses começamos uma jornada que transformou minha vida.
+        Em cada sorriso seu encontrei felicidade.
+        Em cada abraço encontrei paz.
+        E em cada momento ao seu lado encontrei a certeza de que o amor
+        pode ser ainda mais bonito do que eu imaginava.
+    </p>
+
+    <p>
+        Obrigado por compartilhar sua vida comigo.
+        Obrigado pelos momentos felizes, pelas conversas,
+        pelo carinho e por fazer parte dos meus dias.
+    </p>
+
+    <p>
+        O futuro é o meu lugar favorito,
+        porque você está nele.
+    </p>
+
+</section>
+
+<section class="counter">
+
+    <h2>Nosso Tempo Juntos</h2>
+
+    <div id="contador"></div>
+
+</section>
+
+<section class="footer">
+
+    <h2>❤️ Eu Te Amo ❤️</h2>
+
+    <p>
+        Hoje, amanhã e em todos os futuros possíveis.
+    </p>
+
+</section>
+
+<script>
+
+const inicio = new Date("2025-08-11");
+
+function atualizarContador(){
+
+    const agora = new Date();
+
+    const diferenca = agora - inicio;
+
+    const dias = Math.floor(diferenca / (1000*60*60*24));
+
+    document.getElementById("contador").innerHTML =
+    dias + " dias juntos";
+}
+
+atualizarContador();
+
+</script>
 
 </body>
 </html>
