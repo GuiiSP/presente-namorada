@@ -2,98 +2,102 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nossa História ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<div class="particles"></div>
+    <div class="particles"></div>
 
-<section class="hero">
+    <!-- CAPA -->
+    <section class="hero">
 
-    <img src="foto.jpg.jpeg" alt="Nós dois">
-    
+        <img src="foto.jpg.jpeg" alt="Nós dois">
 
-    <div class="overlay">
-        <h1>Féliz Dia Dos Namorados ❤️</h1>
+        <div class="overlay">
+            <h1>Feliz Dia dos Namorados ❤️</h1>
+            <p>Te amo demais, meu amor.</p>
+        </div>
+
+    </section>
+
+    <!-- MENSAGEM -->
+    <section class="content">
+
+        <img src="foto2.jpg.jpeg" alt="Nosso momento especial" class="foto-secundaria">
+
+        <h2>Para Você ❤️</h2>
+
         <p>
-            Te amo DEMASS meu amor
+            Há 10 meses começamos uma jornada que transformou minha vida.
+            Em cada sorriso seu encontrei felicidade.
+            Em cada abraço encontrei paz.
+            E em cada momento ao seu lado encontrei a certeza de que o amor
+            pode ser ainda mais bonito do que eu imaginava.
         </p>
-    
-</section>
 
-<section class="content">
+        <p>
+            Obrigado por compartilhar sua vida comigo.
+            Obrigado pelos momentos felizes, pelas conversas,
+            pelo carinho e por fazer parte dos meus dias.
+        </p>
 
-    <img src="foto2.jpg.jpeg" alt="Momento 2">
+        <p>
+            O futuro é o meu lugar favorito,
+            porque você está nele.
+        </p>
 
-    <div class="overlay">
-    <h2>Para Você</h2>
+    </section>
 
-    <p>
-        Há 10 meses começamos uma jornada que transformou minha vida.
-        Em cada sorriso seu encontrei felicidade.
-        Em cada abraço encontrei paz.
-        E em cada momento ao seu lado encontrei a certeza de que o amor
-        pode ser ainda mais bonito do que eu imaginava.
-    </p>
+    <!-- CONTADOR -->
+    <section class="counter">
 
-    <p>
-        Obrigado por compartilhar sua vida comigo.
-        Obrigado pelos momentos felizes, pelas conversas,
-        pelo carinho e por fazer parte dos meus dias.
-    </p>
+        <h2>Nosso Tempo de Namoro ⏳</h2>
 
-    <p>
-        O futuro é o meu lugar favorito,
-        porque você está nele.
-    </p>
+        <div id="contador"></div>
 
+    </section>
 
-</section>
+    <!-- RODAPÉ -->
+    <section class="footer">
 
-<section class="counter">
+        <h2>❤️ Eu Te Amo ❤️</h2>
 
-    <h2>Nosso Tempo de Namoro</h2>
+        <p>
+            Hoje, amanhã e em todos os futuros possíveis.
+        </p>
 
-    <div id="contador"></div>
+    </section>
 
-</section>
+    <script>
 
-<section class="footer">
+        const inicio = new Date("2025-08-05");
 
-    <h2>❤️ Eu Te Amo ❤️</h2>
+        function atualizarContador() {
 
-    <p>
-        Hoje, amanhã e em todos os futuros possíveis.
-    </p>
+            const agora = new Date();
 
-</section>
+            const diferenca = agora - inicio;
 
-<script>
+            const dias = Math.floor(
+                diferenca / (1000 * 60 * 60 * 24)
+            );
 
-const inicio = new Date("2025-08-05");
+            document.getElementById("contador").innerHTML =
+                dias + " dias juntos ❤️";
+        }
 
-function atualizarContador(){
+        atualizarContador();
 
-    const agora = new Date();
-
-    const diferenca = agora - inicio;
-
-    const dias = Math.floor(diferenca / (1000*60*60*24));
-
-    document.getElementById("contador").innerHTML =
-    dias + " dias juntos";
-}
-
-atualizarContador();
-
-</script>
+    </script>
 
 </body>
+
 </html>
