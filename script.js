@@ -1,5 +1,5 @@
 const text = `
-Há 10 meses você entrou na minha vida.
+Há 10 iniciamos nosso namoro.
 
 Desde então os dias ficaram mais leves,
 os sorrisos mais sinceros e o futuro muito mais bonito.
