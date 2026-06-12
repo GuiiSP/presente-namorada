@@ -1,150 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Feliz Dia dos Namorados ❤️</title>
+<title>Grazielle ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<div class="particles"></div>
+<div id="loader">
+    <h1>Para Grazielle ✨</h1>
+    <div class="loader-bar">
+        <span></span>
+    </div>
+</div>
 
-<div class="hearts"></div>
+<div id="stars"></div>
 
-<audio id="musica" loop>
+<audio id="music" loop>
     <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
 <section class="hero">
 
-    <img src="foto.jpg.jpeg" alt="Nós dois">
+    <img src="foto.jpg.jpeg" class="hero-img">
 
-    <div class="overlay">
+    <div class="hero-content">
 
-        <h1>❤️ Feliz Dia dos Namorados ❤️</h1>
+        <h1>Grazielle</h1>
 
         <p>
-            10 meses ao lado da pessoa que tornou
-            minha vida muito mais feliz.
+            Há pessoas que passam pela nossa vida.
+            E existem aquelas que mudam completamente
+            o significado dela.
         </p>
 
-        <button class="play-btn"
-        onclick="document.getElementById('musica').play()">
-            🎵 Tocar Nossa Música
+        <button id="musicBtn">
+            🎵 Nossa Música
         </button>
 
     </div>
 
 </section>
 
-<section class="content" id="mensagem">
+<section class="letter reveal">
 
-    <h2>Para Você ❤️</h2>
+    <h2>Uma Carta Para Você ❤️</h2>
 
-    <p>
-        Há 10 meses começamos uma jornada que transformou minha vida.
-        Em cada sorriso seu encontrei felicidade.
-        Em cada abraço encontrei paz.
-        Em cada momento ao seu lado encontrei motivos para acreditar
-        ainda mais no amor.
-    </p>
-
-    <p>
-        Obrigado por cada conversa,
-        cada abraço,
-        cada carinho,
-        cada momento especial.
-    </p>
-
-    <p>
-        O futuro é o meu lugar favorito,
-        porque você está nele.
-    </p>
+    <p id="typing"></p>
 
 </section>
 
-<section class="gallery">
+<section class="counter reveal">
 
-    <h2>Nossos Momentos 📸</h2>
+    <h2>Nosso Tempo Juntos</h2>
 
-    <div class="gallery-grid">
+    <div class="cards">
 
-        <img src="foto.jpg.jpeg">
-        <img src="foto2.jpg.jpeg">
+        <div class="card">
+            <span id="months">0</span>
+            <small>Meses</small>
+        </div>
+
+        <div class="card">
+            <span id="days">0</span>
+            <small>Dias</small>
+        </div>
+
+        <div class="card">
+            <span id="hours">0</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="card">
+            <span id="minutes">0</span>
+            <small>Minutos</small>
+        </div>
 
     </div>
 
 </section>
 
-<section class="counter">
+<section class="gallery reveal">
 
-    <h2>Nosso Tempo Juntos ⏳</h2>
+    <h2>Nossos Momentos 📸</h2>
 
-    <div id="contador"></div>
+    <div class="gallery-grid">
+
+        <img src="foto.jpg.jpeg" class="gallery-img">
+        <img src="foto2.jpg.jpeg" class="gallery-img">
+
+    </div>
 
 </section>
 
-<section class="footer">
+<div id="lightbox">
+    <img id="lightboxImg">
+</div>
 
-    <h2>❤️ Eu Te Amo ❤️</h2>
+<section class="final">
+
+    <h2>Bonnie & Clyde ❤️</h2>
 
     <p>
-        Hoje, amanhã e em todos os futuros possíveis.
+        Você e eu.
+        Contra o mundo.
     </p>
+
+    <h3>Eu te amo, Grazielle.</h3>
 
 </section>
 
-<script>
-
-const inicio = new Date("2025-08-05");
-
-function atualizarContador(){
-
-    const agora = new Date();
-
-    const diff = agora - inicio;
-
-    const dias = Math.floor(diff / (1000*60*60*24));
-
-    document.getElementById("contador").innerHTML =
-    dias + " dias ❤️";
-}
-
-atualizarContador();
-
-setInterval(atualizarContador,60000);
-
-function criarCoracao(){
-
-    const heart = document.createElement("div");
-
-    heart.classList.add("heart");
-
-    heart.innerHTML = "❤️";
-
-    heart.style.left = Math.random()*100 + "vw";
-
-    heart.style.animationDuration =
-    Math.random()*3 + 4 + "s";
-
-    document.body.appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },7000);
-}
-
-setInterval(criarCoracao,800);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
