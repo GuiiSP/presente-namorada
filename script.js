@@ -1,10 +1,14 @@
 const text = `
+
 Há 10 iniciamos nosso namoro.
 
 Desde então os dias ficaram mais leves,
 os sorrisos mais sinceros e o futuro muito mais bonito.
 
-Obrigado por cada abraço,
+ Obrigado por cada abraço, Em cada sorriso seu encontrei felicidade.
+ Em cada abraço encontrei paz.
+ E em cada momento ao seu lado encontrei a certeza de que o amor
+  pode ser ainda mais bonito do que eu imaginava.
 cada conversa,
 cada carinho
 e cada momento ao seu lado.
