@@ -2,102 +2,149 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Dia dos Namorados ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Feliz Dia dos Namorados ❤️</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div class="particles"></div>
+<div class="particles"></div>
 
-    <!-- CAPA -->
-    <section class="hero">
+<div class="hearts"></div>
 
-        <img src="foto.jpg.jpeg" alt="Nós dois">
+<audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
 
-        <div class="overlay">
-            <h1>Feliz Dia dos Namorados ❤️</h1>
-            <p>Te amo demais, meu amor.</p>
-        </div>
+<section class="hero">
 
-    </section>
+    <img src="foto.jpg.jpeg" alt="Nós dois">
 
-    <!-- MENSAGEM -->
-    <section class="content">
+    <div class="overlay">
 
-        <img src="foto2.jpg.jpeg" alt="Nosso momento especial" class="foto-secundaria">
-
-        <h2>Para Você ❤️</h2>
+        <h1>❤️ Feliz Dia dos Namorados ❤️</h1>
 
         <p>
-            Há 10 meses começamos uma jornada que transformou minha vida.
-            Em cada sorriso seu encontrei felicidade.
-            Em cada abraço encontrei paz.
-            E em cada momento ao seu lado encontrei a certeza de que o amor
-            pode ser ainda mais bonito do que eu imaginava.
+            10 meses ao lado da pessoa que tornou
+            minha vida muito mais feliz.
         </p>
 
-        <p>
-            Obrigado por compartilhar sua vida comigo.
-            Obrigado pelos momentos felizes, pelas conversas,
-            pelo carinho e por fazer parte dos meus dias.
-        </p>
+        <button class="play-btn"
+        onclick="document.getElementById('musica').play()">
+            🎵 Tocar Nossa Música
+        </button>
 
-        <p>
-            O futuro é o meu lugar favorito,
-            porque você está nele.
-        </p>
+    </div>
 
-    </section>
+</section>
 
-    <!-- CONTADOR -->
-    <section class="counter">
+<section class="content" id="mensagem">
 
-        <h2>Nosso Tempo de Namoro ⏳</h2>
+    <h2>Para Você ❤️</h2>
 
-        <div id="contador"></div>
+    <p>
+        Há 10 meses começamos uma jornada que transformou minha vida.
+        Em cada sorriso seu encontrei felicidade.
+        Em cada abraço encontrei paz.
+        Em cada momento ao seu lado encontrei motivos para acreditar
+        ainda mais no amor.
+    </p>
 
-    </section>
+    <p>
+        Obrigado por cada conversa,
+        cada abraço,
+        cada carinho,
+        cada momento especial.
+    </p>
 
-    <!-- RODAPÉ -->
-    <section class="footer">
+    <p>
+        O futuro é o meu lugar favorito,
+        porque você está nele.
+    </p>
 
-        <h2>❤️ Eu Te Amo ❤️</h2>
+</section>
 
-        <p>
-            Hoje, amanhã e em todos os futuros possíveis.
-        </p>
+<section class="gallery">
 
-    </section>
+    <h2>Nossos Momentos 📸</h2>
 
-    <script>
+    <div class="gallery-grid">
 
-        const inicio = new Date("2025-08-05");
+        <img src="foto.jpg.jpeg">
+        <img src="foto2.jpg.jpeg">
 
-        function atualizarContador() {
+    </div>
 
-            const agora = new Date();
+</section>
 
-            const diferenca = agora - inicio;
+<section class="counter">
 
-            const dias = Math.floor(
-                diferenca / (1000 * 60 * 60 * 24)
-            );
+    <h2>Nosso Tempo Juntos ⏳</h2>
 
-            document.getElementById("contador").innerHTML =
-                dias + " dias juntos ❤️";
-        }
+    <div id="contador"></div>
 
-        atualizarContador();
+</section>
 
-    </script>
+<section class="footer">
+
+    <h2>❤️ Eu Te Amo ❤️</h2>
+
+    <p>
+        Hoje, amanhã e em todos os futuros possíveis.
+    </p>
+
+</section>
+
+<script>
+
+const inicio = new Date("2025-08-05");
+
+function atualizarContador(){
+
+    const agora = new Date();
+
+    const diff = agora - inicio;
+
+    const dias = Math.floor(diff / (1000*60*60*24));
+
+    document.getElementById("contador").innerHTML =
+    dias + " dias ❤️";
+}
+
+atualizarContador();
+
+setInterval(atualizarContador,60000);
+
+function criarCoracao(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.animationDuration =
+    Math.random()*3 + 4 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },7000);
+}
+
+setInterval(criarCoracao,800);
+
+</script>
 
 </body>
-
 </html>
